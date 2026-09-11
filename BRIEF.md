@@ -3,7 +3,6 @@
 **Author:** Rohan Jasani
 
 > **Read `DOMAIN.md` first.** It describes the business, its people, its workflows, and its data. This brief covers only what's being built, and cites the domain by section (e.g. `DOMAIN.md §D3`).
-> **What isn't being built is recorded in `DESCOPED.md`.**
 
 ---
 
@@ -25,7 +24,7 @@
 
 ## Experience focus
 
-**Order tracking for the client** — from the moment Priya walks out of her appointment to the moment she walks out of the apothecary with her formula in hand.
+**Order tracking for the client** — from the moment Priya walks out of her appointment to the moment she walks out of Groundwork Apothecary with her formula in hand.
 
 One task, done well: *where is my formula, and is anything needed from me?*
 
@@ -35,7 +34,7 @@ This is journey **J1** seen from the outside — `DOMAIN.md §D4`. Every stage b
 
 ## The context
 
-Priya leaves Rohan's office knowing only that "a formula has been sent over." Then: silence. She doesn't know how long compounding takes, whether it's started, whether something's out of stock, or when to drive over. Today that gap gets filled by phoning Nora and asking — friction for Priya, interruption for the apothecary.
+Priya leaves Rohan's office knowing only that "a formula has been sent over." Then: silence. She doesn't know how long compounding takes, whether it's started, whether something's out of stock, or when to drive over. Today that gap gets filled by phoning Nora and asking — friction for Priya, interruption for Groundwork Apothecary.
 
 This is a **glance-and-go** experience. Priya checks it standing in a parking lot, waiting for a bus, between meetings. She is never at a desk. Most visits are three seconds long and answer one question: *is it ready?*
 
@@ -47,7 +46,7 @@ Mapped directly from **J1** (`DOMAIN.md §D4`):
 
 | # | Stage | J1 step | What Priya sees |
 |---|---|---|---|
-| 1 | **Formula received** | 2–3 | Rohan's order has arrived at the apothecary |
+| 1 | **Formula received** | 2–3 | Rohan's order has arrived at Groundwork Apothecary |
 | 2 | **Under review** | 4 | Safety and stock checks in progress |
 | 3 | **In preparation** | 5 | Being compounded at the bench |
 | 4 | **Ready for pickup** | 6 | Location, hours, what to bring |
@@ -72,7 +71,7 @@ Plus the exception states, which matter more than the happy path:
 - **M5 — Notifications.** Push or SMS on stage changes and blockers, so Priya doesn't have to keep checking. The best version of this app is one she rarely needs to open.
 - **M6 — Pickup details.** Address, hours, map link, and what to bring — one tap from ready status.
 - **M7 — Formula reference.** After pickup, retain dosing instructions, preparation method, and safety warnings. **This is the screen she'll actually reopen** — at home, at 9pm, wondering how long to steep it.
-- **M8 — Get help.** Contact the apothecary, or report a reaction (journey **J3**), without hunting for a phone number.
+- **M8 — Get help.** Contact Groundwork Apothecary, or report a reaction (journey **J3**), without hunting for a phone number.
 - **M9 — History.** Past formulas, since Priya is a quarterly regular. Reorder context and continuity across visits.
 
 ## Design constraints
@@ -82,6 +81,10 @@ Plus the exception states, which matter more than the happy path:
 - **Plain language, no jargon.** Priya is not a clinician. "Under review" not "safety-flag adjudication."
 - **Calm by default.** A health-adjacent app that pings anxiously is a bad app. Alarming states are reserved for things that are genuinely blocking.
 - **Privacy-aware.** Health information on a lock screen; notifications must not leak formula contents or conditions into a preview.
+
+## Implementation
+
+Built as a Vue 3 + Vite single-page app (no backend)
 
 ## Success criteria
 

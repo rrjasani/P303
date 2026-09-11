@@ -15,10 +15,10 @@ Custom (or "bespoke") formulation is the traditional method of preparing herbal 
 
 Energetics — the warming/cooling, drying/moistening, tonifying/dispersing qualities of an herb — allow a formula to be personalized to the individual, their constitution, and their current tendencies rather than to a diagnostic label. Ten clients can share the same biomedical diagnosis and receive ten different formulas: different herbs, different plant parts, different proportions.
 
-The apothecary is the **compounding and fulfillment layer** in this system. It does not diagnose or prescribe. It stocks raw materials, executes formulas specified by practitioners, and hands the finished preparation to the practitioner's client.
+Groundwork Apothecary is the **compounding and fulfillment layer** in this system. It does not diagnose or prescribe. It stocks raw materials, executes formulas specified by practitioners, and hands the finished preparation to the practitioner's client.
 
 ### Inventory reality
-The apothecary may carry ~300 distinct herbs. Critically, **an "herb" is not one SKU** — the unit of inventory is *herb × plant part × preparation form*, because different parts of the same plant carry different properties and are therefore not substitutable.
+Groundwork Apothecary may carry ~300 distinct herbs. Critically, **an "herb" is not one SKU** — the unit of inventory is *herb × plant part × preparation form*, because different parts of the same plant carry different properties and are therefore not substitutable.
 
 Preparation forms:
 
@@ -43,11 +43,11 @@ Apothecaries may also carry powders, capsules, oils, salves, glycerites, and gra
 
 Three parties, and the money does not flow the way you'd first guess:
 
-1. **Herbalist / practitioner** — sees the client, designs the formula, submits the order to the apothecary. Is the apothecary's *account relationship*, but usually **not the payer**.
+1. **Herbalist / practitioner** — sees the client, designs the formula, submits the order to Groundwork Apothecary. Is Groundwork Apothecary's *account relationship*, but usually **not the payer**.
 2. **Client (the practitioner's patient)** — receives and typically **pays** for the formula at pickup.
-3. **Apothecary** — compounds, holds inventory, fulfills, collects payment, manages QC and supplier relationships. **Sets pricing**, and so controls both cost and margin.
+3. **Groundwork Apothecary** — compounds, holds inventory, fulfills, collects payment, manages QC and supplier relationships. **Sets pricing**, and so controls both cost and margin.
 
-The apothecary's *account* is the practitioner — retention, volume, loyalty, referrals. Its *transaction* is with the client.
+Groundwork Apothecary's *account* is the practitioner — retention, volume, loyalty, referrals. Its *transaction* is with the client.
 
 ---
 
@@ -55,13 +55,13 @@ The apothecary's *account* is the practitioner — retention, volume, loyalty, r
 
 **Scale:** the shop is large enough to warrant a dedicated inventory/purchasing manager. Roles are genuinely split — the owner is not doing the buying herself.
 
-### Maya Okonkwo — Apothecary Owner / Operator
+### Maya Okonkwo — Owner / Operator, Groundwork Apothecary
 Runs the business. Owns assortment strategy, pricing, margin, practitioner relationships, and growth. Delegates day-to-day buying to Devon and bench work to Sam, but is accountable for whether the shop is profitable and whether the right things are on the shelf. Time-poor.
 
 *Key questions:* Which herbs are earning their shelf space? What's tying up cash and not moving? What should I carry more of, less of, drop, or add? Where am I leaving money on the table on price?
 
 ### Rohan Jasani — Herbalist / Practitioner *(external)*
-Consults with clients, designs custom formulas factoring energetics, and submits them to the apothecary through the practitioner portal. Source of most of the system's input data. Practices somewhat in isolation — he sees his own caseload and nothing else, and has no view of what the wider practitioner community is doing.
+Consults with clients, designs custom formulas factoring energetics, and submits them to Groundwork Apothecary through the practitioner portal. Source of most of the system's input data. Practices somewhat in isolation — he sees his own caseload and nothing else, and has no view of what the wider practitioner community is doing.
 
 *Key questions:* What are other practitioners actually prescribing? Which herbs are rising or falling in use? Which herbs get paired together, and am I missing combinations I should know? How does my own practice compare — am I an outlier, and is that deliberate? What's getting hard to source?
 
@@ -87,9 +87,9 @@ A **regular** — sees Rohan quarterly for an ongoing constitutional protocol, w
 ### J1 — Formula submission → fulfillment → pickup *(the core loop)*
 
 1. **Consult & design (Rohan).** Rohan meets with Priya and designs a formula, factoring in energetics alongside her medical conditions, current pharmaceuticals and supplements, allergies, the herbal actions being targeted, and any contraindications.
-2. **Submit (Rohan → apothecary).** Rohan submits the order through the practitioner portal, specifying for each component the Latin binomial, plant part, preparation form, proportion, and dosing regimen, plus preparation instructions and safety notes. May submit a multi-part order — e.g. a tea and a companion tincture — as a single job.
+2. **Submit (Rohan → Groundwork Apothecary).** Rohan submits the order through the practitioner portal, specifying for each component the Latin binomial, plant part, preparation form, proportion, and dosing regimen, plus preparation instructions and safety notes. May submit a multi-part order — e.g. a tea and a companion tincture — as a single job.
 3. **Intake & confirmation (Nora).** Order received and acknowledged; Priya is told when to expect it.
-4. **Clinical & inventory validation (apothecary).** Safety review screens for low-dose botanicals and high-risk herb–drug interactions against the client's medication list; the fulfillment check confirms every component is in stock in the right part and form, in sufficient quantity, with acceptable expiry. Anything flagged goes back to Rohan; shortfalls route to Devon.
+4. **Clinical & inventory validation (Groundwork Apothecary).** Safety review screens for low-dose botanicals and high-risk herb–drug interactions against the client's medication list; the fulfillment check confirms every component is in stock in the right part and form, in sufficient quantity, with acceptable expiry. Anything flagged goes back to Rohan; shortfalls route to Devon.
 5. **Compound (Sam).** Pulls by lot, weighs and mixes to proportion, labels with Latin names, dosing, and any safety warnings, records the lot IDs consumed against the order, cleans down the station to prevent cross-contamination, and packages the order for pickup.
 6. **Ready & notify (Nora).** Order marked ready; Priya notified.
 7. **Handoff & payment (Nora → Priya).** Nora walks Priya through dosing and safety instructions, flags any low-dose or interaction warnings verbally as well as on the label, and collects payment. Rohan is credited with the order for relationship and volume tracking.
@@ -104,7 +104,7 @@ Priya reports a reaction — to Rohan, or to Nora at the counter → it's flagge
 Owner reviews what's moving, what's dead, what's constrained. Decides what to expand, what to reduce, what to discontinue, and what to add based on unmet practitioner requests.
 
 ### J5 — Request for an herb not carried
-Practitioner requests an herb the apothecary doesn't stock → request is logged → demand signal accumulates across practitioners → owner decides whether to add it to the assortment. Turns lost orders into a purchasing input.
+Practitioner requests an herb Groundwork Apothecary doesn't stock → request is logged → demand signal accumulates across practitioners → owner decides whether to add it to the assortment. Turns lost orders into a purchasing input.
 
 ---
 
@@ -118,7 +118,7 @@ Practitioner requests an herb the apothecary doesn't stock → request is logged
 | **Supplier** | name, domestic/import, lead time, fill rate, reliability score, herbs supplied |
 | **Practitioner** | name, credential, tenure, contact, account status |
 | **Client** | linked to practitioner, contact, order history, **medical conditions, current pharmaceuticals & supplements, allergies** |
-| **Order** | practitioner, client, components, dosing regimen, prep instructions, safety notes, **safety-review status**, fulfillment status, price (apothecary-set) |
+| **Order** | practitioner, client, components, dosing regimen, prep instructions, safety notes, **safety-review status**, fulfillment status, price (set by Groundwork Apothecary) |
 | **Order component** | SKU (Latin name + part + form), proportion/quantity, dose, lots consumed |
 | **Safety flag** | order, type (low-dose botanical / herb–drug interaction / contraindication), severity, resolution, who confirmed |
 | **Herb request** | practitioner, herb not carried, date, times requested |
