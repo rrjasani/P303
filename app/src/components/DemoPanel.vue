@@ -1,13 +1,13 @@
 <script setup>
 import { ref, computed } from "vue";
-import { state, advanceStage, setException, clearException, resetDemo } from "../store.js";
+import { state, goToStage, setException, clearException } from "../store.js";
 import { STAGES, stageIndex } from "../data.js";
 
 // Build-time aid so reviewers can walk every stage and exception state
 // without a backend to drive them. Not part of the client experience —
 // kept visually distinct (dashed border, hatched fill) for that reason.
 const open = ref(true);
-const atEnd = computed(() => stageIndex(state.order.stage) >= STAGES.length - 1);
+const currentIdx = computed(() => stageIndex(state.order.stage));
 </script>
 
 <template>
@@ -18,11 +18,20 @@ const atEnd = computed(() => stageIndex(state.order.stage) >= STAGES.length - 1)
     </div>
 
     <div class="scenario-group">
-      <div class="scenario-group-label">Advance the order</div>
-      <button class="scenario-btn" :disabled="atEnd" @click="advanceStage">
-        Next: {{ atEnd ? "Done" : STAGES[stageIndex(state.order.stage) + 1].label }}
-      </button>
-      <button class="scenario-btn" @click="resetDemo">Reset order</button>
+      <div class="scenario-group-label">View Order Stage</div>
+      <div class="stepper">
+        <button
+          v-for="(s, i) in STAGES"
+          :key="s.key"
+          class="stepper-btn"
+          :class="{ 'is-done': i < currentIdx, 'is-current': i === currentIdx }"
+          :disabled="i === currentIdx"
+          @click="goToStage(s.key)"
+        >
+          <span class="stepper-dot">{{ i < currentIdx ? "✓" : "" }}</span>
+          {{ s.label }}
+        </button>
+      </div>
     </div>
 
     <div class="scenario-group">

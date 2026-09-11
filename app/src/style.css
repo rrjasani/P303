@@ -659,6 +659,57 @@ p { margin: 0; }
 .scenario-btn:active { background: rgba(255, 255, 255, 0.16); }
 .scenario-btn:disabled { color: var(--white); opacity: 0.3; border-color: rgba(255, 255, 255, 0.08); cursor: default; }
 
+/* stepped flow — every stage is clickable and jumps straight there, except "current" */
+.stepper {
+  display: flex;
+  flex-direction: column;
+}
+.stepper-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  border: none;
+  background: none;
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  opacity: 0.55;
+  font-size: 12.5px;
+  text-align: left;
+  padding: 7px 8px 7px 4px;
+  cursor: pointer;
+}
+.stepper-btn:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 26px;
+  bottom: -3px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.stepper-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.1); opacity: 0.9; }
+.stepper-dot {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  z-index: 1;
+}
+.stepper-btn.is-done { opacity: 0.7; }
+.stepper-btn.is-done .stepper-dot { background: rgba(255, 255, 255, 0.25); border-color: transparent; }
+.stepper-btn.is-current {
+  opacity: 1;
+  font-weight: 700;
+  cursor: default;
+}
+.stepper-btn.is-current .stepper-dot { background: var(--leaf-green); border-color: var(--leaf-green); }
+
 .sr-only {
   position: absolute; width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden;

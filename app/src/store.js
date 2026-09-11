@@ -25,22 +25,20 @@ export function addToast(message) {
   }, 4200);
 }
 
-/** Advances to the next stage in J1. Auto-charges on reaching "ready" if autopay is on. */
-export function advanceStage() {
-  const idx = stageIndex(state.order.stage);
-  if (idx >= STAGES.length - 1) return;
-  const next = STAGES[idx + 1];
-  state.order.stage = next.key;
-  state.order.timestamps[next.key] = new Date();
+/** Jumps to any stage in J1 — forward or back. Auto-charges on reaching "ready" if autopay is on. */
+export function goToStage(key) {
+  const idx = stageIndex(key);
+  STAGES.forEach((s, i) => {
+    state.order.timestamps[s.key] = i <= idx ? state.order.timestamps[s.key] ?? new Date() : null;
+  });
+  state.order.stage = key;
   state.order.exception = null;
 
   addToast(
-    next.key === "ready"
-      ? "Your order is ready for pickup at Groundwork Apothecary."
-      : "Your order status just updated."
+    key === "ready" ? "Your order is ready for pickup at Groundwork Apothecary." : "Your order status just updated."
   );
 
-  if (next.key === "ready" && state.order.payment.autopay && state.order.payment.status !== "paid") {
+  if (key === "ready" && state.order.payment.autopay && state.order.payment.status !== "paid") {
     state.order.payment.status = "paid";
     addToast(`Auto-pay: $${state.order.payment.amount.toFixed(2)} charged to your saved card.`);
   }
@@ -54,11 +52,6 @@ export function setException(key) {
 
 export function clearException() {
   state.order.exception = null;
-}
-
-export function resetDemo() {
-  state.order = createActiveOrder();
-  state.toasts = [];
 }
 
 export function payNow() {

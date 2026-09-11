@@ -85,16 +85,16 @@ export function createActiveOrder() {
     id: "ord_2024_0912",
     practitioner: "Rohan Jasani",
     client: "Priya Raman",
-    stage: "under_review",
+    stage: "received",
     exception: null,
     timestamps: {
-      received: hoursAgo(3),
-      under_review: hoursAgo(2),
+      received: hoursAgo(1),
+      under_review: null,
       in_prep: null,
       ready: null,
       picked_up: null,
     },
-    eta: hoursFromNow(5),
+    eta: hoursFromNow(6),
     formula: {
       name: "Priya's quarterly blend",
       components: [
