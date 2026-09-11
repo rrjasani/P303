@@ -98,5 +98,5 @@ Built as a Vue 3 + Vite single-page app (no backend)
 | # | Decision | Status |
 |---|---|---|
 | 1 | Persona and scenario | **Resolved** — Priya, client-facing order tracking |
-| 2 | Does auto-pay charge at "ready for pickup" or at physical handoff? | Open |
-| 3 | Authentication: magic link from SMS, or account with login? | Open |
+| 2 | Does auto-pay charge at "ready for pickup" or at physical handoff? | **Resolved** — at "ready for pickup," so physical handoff is a pure handoff per M4 |
+| 3 | Authentication: magic link from SMS, or account with login? | **Resolved** — magic link only; the link from the confirmation text *is* the auth, so there's no separate login screen |
