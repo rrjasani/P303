@@ -576,11 +576,11 @@ p { margin: 0; }
   flex: none;
 }
 
-/* ---------- demo panel (build aid, not part of the client experience) ---------- */
-.demo-toggle {
+/* ---------- scenarios panel (build aid, not part of the client experience) ---------- */
+.scenario-toggle {
   position: fixed;
-  top: 116px;
-  right: var(--space-md);
+  top: 24px;
+  right: 24px;
   background: var(--off-white);
   border: 1px dashed var(--ink-muted);
   color: var(--ink-muted);
@@ -593,30 +593,71 @@ p { margin: 0; }
   cursor: pointer;
   z-index: 55;
 }
-.demo-panel {
-  border: 1px dashed var(--ink-muted);
+.scenario-panel {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  bottom: 24px;
+  width: 240px;
+  overflow-y: auto;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
   border-radius: var(--radius-md);
   padding: var(--space-md);
-  background: repeating-linear-gradient(135deg, var(--off-white) 0 10px, #efeee7 10px 20px);
+  background: #2e361b; /* forest, darkened ~30% so the panel reads behind the phone frame */
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
 }
-.demo-panel h4 {
+.scenario-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.scenario-panel-head h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.scenario-close {
+  background: none;
+  border: none;
+  color: var(--white);
+  opacity: 0.75;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 4px;
+  cursor: pointer;
+}
+.scenario-close:hover { opacity: 1; }
+.scenario-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.scenario-group-label {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--ink-muted);
-  margin-bottom: var(--space-sm);
+  color: var(--white);
+  opacity: 0.75;
+  margin-bottom: 2px;
 }
-.demo-grid { display: flex; flex-wrap: wrap; gap: 6px; }
-.demo-btn {
-  border: 1px solid var(--ink-muted);
-  background: var(--white);
-  color: var(--bark-brown);
-  font-size: 11.5px;
-  padding: 6px 10px;
+.scenario-btn {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  opacity: 0.85;
+  font-size: 12.5px;
+  text-align: left;
+  padding: 9px 10px;
   border-radius: var(--radius-sm);
   cursor: pointer;
 }
-.demo-btn:active { background: var(--off-white); }
+.scenario-btn:hover { background: rgba(255, 255, 255, 0.1); opacity: 1; }
+.scenario-btn:active { background: rgba(255, 255, 255, 0.16); }
+.scenario-btn:disabled { color: var(--white); opacity: 0.3; border-color: rgba(255, 255, 255, 0.08); cursor: default; }
 
 .sr-only {
   position: absolute; width: 1px; height: 1px;
