@@ -84,7 +84,27 @@ Plus the exception states, which matter more than the happy path:
 
 ## Implementation
 
-Built as a Vue 3 + Vite single-page app (no backend)
+Built as a Vue 3 + Vite single-page app (no backend) in [`app/`](app/) — plain SFCs, hand-rolled CSS from `DESIGN.md`'s tokens, no router or state library (a handful of screens and one reactive store didn't need either).
+
+**Screens:** order status (home), formula history, formula reference, help/contact.
+
+| Requirement | Where it lives |
+|---|---|
+| M1 One-glance status | Status card at the top of the home screen — stage, plain-language line, ETA |
+| M2 Timeline | Collapsed to current ± one stage by default; "See full timeline" expands all five |
+| M3 Action surfacing | A single banner slot above the status card — an exception, a payment prompt, or an explicit "Nothing needed from you right now" |
+| M4 Payment | Pay now / auto-pay toggle / retry-on-decline, via a bottom sheet; auto-pay charges at "ready for pickup" (see Open decisions) |
+| M5 Notifications | In-app toast on every stage change and exception, standing in for push/SMS since there's no backend to send either. Text is deliberately generic — never names herbs or conditions, per the privacy-aware constraint |
+| M6 Pickup details | Address, hours, map link, call, what to bring — shown once "ready for pickup" |
+| M7 Formula reference | Ingredients (Latin binomial, part, form), dosing, prep, safety notes — reachable from the status screen once picked up, and from History |
+| M8 Get help | Call / directions, plus a report-a-reaction form (J3) |
+| M9 History | Past formulas, each reopening into the same formula reference screen |
+
+**Known gap:** the "Ready, awaiting pickup — gentle nudge if it's been sitting" exception state (see "Fulfillment stages to track" above) wasn't built. The other four exception states were.
+
+**Since there's no backend**, an order can't progress on its own. A **Scenarios panel** (top-right, dev-only, not part of the client experience) lets you jump directly to any stage or trigger any exception state to see the app respond to it.
+
+Run it: `cd app && npm install && npm run dev`.
 
 ## Success criteria
 
